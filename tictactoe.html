@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tic-tac-toe</title>
+	<meta name="description" content="JS Tic Tac Toe">
+	<link rel="stylesheet" href="stylesheet.css">
+	<script type="text/javascript" src="tictactoejs.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="game">
+		<h1>Tic-Tac-Toe</h1>
+		<h2 id="player">PLAYER X</h2>
+		<div class="main">
+			<div class="square"></div>
+			<button value="0" onclick="myFunction(this.value)"></button>
+			<button value="1" onclick="myFunction(this.value)"></button>
+			<button value="2" onclick="myFunction(this.value)"></button>
+			<button value="3" onclick="myFunction(this.value)"></button>
+			<button value="4" onclick="myFunction(this.value)"></button>
+			<button value="5" onclick="myFunction(this.value)"></button>
+			<button value="6" onclick="myFunction(this.value)"></button>
+			<button value="7" onclick="myFunction(this.value)"></button>
+			<button value="8" onclick="myFunction(this.value)"></button>
+		</div>
+		<button class="button-style" onclick="window.location.reload(true);">RESTRAT</button>
+	</div>
+	<div id="message">
+		<div id="message-box">
+			<h1 id="message-text"></h1>
+			<button class="button-style" id="message-button" onclick="messageClose()"></button>
+		</div>
+	</div>
+</body>
+</html>
