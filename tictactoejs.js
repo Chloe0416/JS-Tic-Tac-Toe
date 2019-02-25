@@ -1,6 +1,6 @@
-// ***** Check "grid" for possible winning combinations *****
-function scanForStrike() {
-	let result = 0;			// *** 0 = winning combination not found, 1 = found ***
+// ***** Check for possible winning combinations *****
+function checkResult() {
+	let result = 0;			// *** 0 = not found, 1 = found ***
 	let num1, num2, num3;
 	for (var i = 0; i < outcomes.length; i++) {
 		num1 = outcomes[i][0]-1;
@@ -15,7 +15,7 @@ function scanForStrike() {
 }
 
 // ***** Function displays notification. *****
-// ***** Parameters define message text and button text. *****
+// ***** Define message text and button text. *****
 function messageOpen(messageText, messageButton) {
 	document.getElementById("message-text").innerHTML = messageText;
 	document.getElementById("message-button").innerHTML = messageButton;
@@ -31,7 +31,7 @@ function messageClose(status) {
 	document.getElementById("game").style.filter = "blur(0px)";
 }
 
-// Main function, that handles all the visuals and game engine.
+// Main function
 function myFunction(index) {
 	if (grid[index] != 0) {
 		messageOpen("You can't go here", "OK");
@@ -50,7 +50,7 @@ function myFunction(index) {
 		player = "X";
 		document.getElementById("player").innerHTML = "PLAYER " + player;
 	}
-	var result = scanForStrike();	// Check for winning combination
+	var result = checkResult();	// Check for winning combination
 	if (result == 1) {
 		messageOpen("PLAYER "+tempPlayer+" WON!", "reload"); 
 	}
